@@ -2,6 +2,7 @@ import { withStyles } from '@material-ui/styles';
 
 // ----------------------------------------------------------------------
 
+// 全局CSS覆盖 https://material-ui.com/zh/customization/components/#global-css-override
 const GlobalStyles = withStyles((theme) => ({
   '@global': {
     '*': {

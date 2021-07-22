@@ -12,7 +12,7 @@ import User from './pages/User';
 import NotFound from './pages/Page404';
 
 // ----------------------------------------------------------------------
-
+// 初始化路由，包括三个参数，path、element、children
 export default function Router() {
   return useRoutes([
     {

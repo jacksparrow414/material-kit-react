@@ -134,7 +134,13 @@ export default function User() {
   return (
     <Page title="User | Minimal-UI">
       <Container>
+        {/* 文档地址：https://next.material-ui.com/zh/components/stack/#interactive
+         * direction:方向
+         * justifyContent：内容对齐方式
+         * mb 是Material-ui一些属性的简写，marginBottom下边距
+         */}
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
+          {/* 文字排版样式 https://material-ui.com/zh/components/typography/ */}
           <Typography variant="h4" gutterBottom>
             User
           </Typography>
@@ -156,6 +162,9 @@ export default function User() {
           />
 
           <Scrollbar>
+            {/* 表格组件：https://next.material-ui.com/zh/components/tables/
+             * sx是重写组件的一些属性，文档：https://next.material-ui.com/zh/system/the-sx-prop/
+             */}
             <TableContainer sx={{ minWidth: 800 }}>
               <Table>
                 <UserListHead
@@ -171,6 +180,7 @@ export default function User() {
                   {filteredUsers
                     .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                     .map((row) => {
+                      // 此写法为对象的解构赋值 https://es6.ruanyifeng.com/#docs/destructuring#%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC
                       const { id, name, role, status, company, avatarUrl, isVerified } = row;
                       const isItemSelected = selected.indexOf(name) !== -1;
 

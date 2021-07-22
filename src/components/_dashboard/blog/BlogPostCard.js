@@ -72,6 +72,8 @@ export default function BlogPostCard({ post, index }) {
   ];
 
   return (
+    // xs sm md lg xl 五中模式选择，分别对应手机、平板、桌面、大桌面、超大桌面下的显示效果
+    // 文档地址 https://next.material-ui.com/zh/components/grid/#how-it-works
     <Grid item xs={12} sm={latestPostLarge ? 12 : 6} md={latestPostLarge ? 6 : 3}>
       <Card sx={{ position: 'relative' }}>
         <CardMediaStyle

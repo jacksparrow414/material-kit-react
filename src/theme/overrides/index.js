@@ -11,7 +11,7 @@ import IconButton from './IconButton';
 import Autocomplete from './Autocomplete';
 
 // ----------------------------------------------------------------------
-
+// 使用loadsh的merge 将自定义的组件对象合并到component对象中 https://www.lodashjs.com/docs/lodash.merge
 export default function ComponentsOverrides(theme) {
   return merge(
     Card(theme),

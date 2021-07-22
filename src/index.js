@@ -14,6 +14,10 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <HelmetProvider>
+    {/* 
+      React-Router的一种，文档地址：https://reactrouter.com/web/api/BrowserRouter
+      全部例子：https://reactrouter.com/web/example/basic
+   */}
     <BrowserRouter>
       <App />
     </BrowserRouter>

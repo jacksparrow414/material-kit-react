@@ -83,6 +83,10 @@ export default function ShopFilterSidebar({
 
       <FormikProvider value={formik}>
         <Form autoComplete="off" noValidate>
+          {/*
+           * 使用抽屉组件
+           * 文档地址：https://next.material-ui.com/zh/components/drawers/
+           */}
           <Drawer
             anchor="right"
             open={isOpenFilter}
@@ -104,7 +108,10 @@ export default function ShopFilterSidebar({
                 <Icon icon={closeFill} width={20} height={20} />
               </IconButton>
             </Stack>
-
+            {/*
+             * 分割线
+             * 文档地址：https://next.material-ui.com/zh/components/dividers/
+             */}
             <Divider />
 
             <Scrollbar>

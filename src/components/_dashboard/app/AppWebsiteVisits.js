@@ -28,6 +28,7 @@ const CHART_DATA = [
 export default function AppWebsiteVisits() {
   const chartOptions = merge(BaseOptionChart(), {
     stroke: { width: [0, 2, 3] },
+    // 这里指定绘制的图形
     plotOptions: { bar: { columnWidth: '11%', borderRadius: 4 } },
     fill: { type: ['solid', 'gradient', 'solid'] },
     labels: [

@@ -22,6 +22,7 @@ export default function AppConversionRates() {
         }
       }
     },
+    // 这里指定绘制的图形
     plotOptions: {
       bar: { horizontal: true, barHeight: '28%', borderRadius: 2 }
     },

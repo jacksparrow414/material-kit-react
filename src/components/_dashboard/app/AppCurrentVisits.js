@@ -56,6 +56,7 @@ export default function AppCurrentVisits() {
         }
       }
     },
+    // 这里指定绘制的图形
     plotOptions: {
       pie: { donut: { labels: { show: false } } }
     }
@@ -65,6 +66,7 @@ export default function AppCurrentVisits() {
     <Card>
       <CardHeader title="Current Visits" />
       <ChartWrapperStyle dir="ltr">
+        {/* 绘制饼图 工具 https://apexcharts.com/ */}
         <ReactApexChart type="pie" series={CHART_DATA} options={chartOptions} height={280} />
       </ChartWrapperStyle>
     </Card>

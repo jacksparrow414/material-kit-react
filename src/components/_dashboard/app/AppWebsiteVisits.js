@@ -6,7 +6,7 @@ import { Card, CardHeader, Box } from '@material-ui/core';
 import { BaseOptionChart } from '../../charts';
 
 // ----------------------------------------------------------------------
-
+// demo 地址 https://apexcharts.com/javascript-chart-demos/mixed-charts/line-column-area/
 const CHART_DATA = [
   {
     name: 'Team A',

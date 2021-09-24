@@ -9,7 +9,7 @@ import bellFill from '@iconify/icons-eva/bell-fill';
 import clockFill from '@iconify/icons-eva/clock-fill';
 import doneAllFill from '@iconify/icons-eva/done-all-fill';
 // material
-import { alpha } from '@material-ui/core/styles';
+import { alpha } from '@mui/material/styles';
 import {
   Box,
   List,
@@ -18,13 +18,13 @@ import {
   Avatar,
   Tooltip,
   Divider,
-  ListItem,
   IconButton,
   Typography,
   ListItemText,
   ListSubheader,
-  ListItemAvatar
-} from '@material-ui/core';
+  ListItemAvatar,
+  ListItemButton
+} from '@mui/material';
 // utils
 import { mockImgAvatar } from '../../utils/mockImages';
 // components
@@ -129,8 +129,7 @@ function NotificationItem({ notification }) {
   const { avatar, title } = renderContent(notification);
 
   return (
-    <ListItem
-      button
+    <ListItemButton
       to="#"
       disableGutters
       component={RouterLink}
@@ -163,7 +162,7 @@ function NotificationItem({ notification }) {
           </Typography>
         }
       />
-    </ListItem>
+    </ListItemButton>
   );
 }
 
@@ -194,8 +193,9 @@ export default function NotificationsPopover() {
     <>
       <IconButton
         ref={anchorRef}
-        onClick={handleOpen}
+        size="large"
         color={open ? 'primary' : 'default'}
+        onClick={handleOpen}
         sx={{
           ...(open && {
             bgcolor: (theme) => alpha(theme.palette.primary.main, theme.palette.action.focusOpacity)
